@@ -31,6 +31,8 @@ body {
     height:auto;
     max-width:100%;
     margin:auto 0;
+    position: relative;
+    z-index:200;
 }
 
 .header__menu-in-header--item-menu li{
@@ -1104,7 +1106,7 @@ body {
     width: 42.65709401709402%;
 }
 
-.banner__request-a-quote--forma--emailAdress_news-letter label {
+.banner__request-a-quote--label_news-letter {
     width:5%;
 }
 
@@ -1431,7 +1433,7 @@ body {
     }
 
 
-    .banner__request-a-quote--forma--emailAdress_news-letter
+    
     .banner__request-a-quote--forma--emailAdress--input{
         height:47px;
     }
@@ -1900,24 +1902,9 @@ body {
 }
 
 @media (max-width:735px) {
-    .item-with-price__head{
-        font-size:1.7rem;
-    }
-
-    .header__toggle-menu-checkbox:checked ~ .header__menu-in-header--item-menu li {
-        display:inline-block;
-        order:5;
-        margin-right:5px;
-    }
-
-    .header__menu-in-header {
-        display:flex;
-        justify-content:space-between; 
-        align-items: flex-start;
-    }
 
     .header__toggle-menu-label {
-        display:inline-block;
+        display:block;
         padding:10px 10px;
         background-color:#ffbb42;
         font-size:1.6rem;
@@ -1928,16 +1915,50 @@ body {
         order:10;
     }
 
+
+    .item-with-price__head{
+        font-size:1.7rem;
+    }
+
     .header__menu-in-header--item-menu {
-        display:none;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between; 
+        align-items: center;
+        width:100vw;
+        height:100vh;
+        position: absolute;
+        left:0px;
+        top:-100vh;
+        background-color: #709dca;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-top:0px;
+        z-index: 99;
+        margin-top: 0px;
+        -webkit-transition: top 0.4s;
+        -moz-transition: top 0.4s;
+        transition: top 0.4s;
+        
     }
 
-}
-
-@media (max-width:695px) {
     .header__menu-in-header--item-menu li a {
-        font-size:1rem;
+        padding: 20px 50px;
+        font-size: 1.55rem;
+        color:#3b3232;
     }
+
+
+    .header__toggle-menu-checkbox:checked ~ .header__menu-in-header--item-menu {
+        top:0px;
+        padding-top: 20px;
+    }
+
+    .header__toggle-menu-checkbox:checked ~ .header__toggle-menu-label {
+        position: relative;
+        z-index: 100;
+    }
+
 }
 
 
@@ -2061,34 +2082,6 @@ body {
 }
 @media (max-width:653px) {
     
-
-    
-    
-
-    .header__menu-in-header--item-menu li{
-        box-sizing:border-box;
-        text-align:center;
-        border-radius:2px;
-        margin-left:0px;
-        display:none;
-    }
-    
-    .header__menu-in-header--item-menu li a{
-        color:#868686;
-        display:inline-block;
-        text-decoration:none; 
-        font-size:1.05rem;
-        padding:0px;
-        margin:0px;
-        font-weight:500;
-        padding:5px 0px;
-        font-family: 'Lato', sans-serif;
-    }
-
-    .header__menu-in-header--item-menu:nth-child(1) {
-        align-self: flex-end;
-    }
-
     /*Адаптирую формы регистрации в блoке banner*/ 
 
     .banner__request-a-quote--forma--submit {
@@ -2179,6 +2172,10 @@ body {
         width: 75%;
     }
 
+    .header__menu-in-header--item-menu li a {
+        padding: 14px 30px;
+    }
+
     .about-us__picture {
         display: none;
     }
@@ -2200,7 +2197,7 @@ body {
         padding-left: 15px;
         padding-right: 15px;
     }
-
+    
     .about-us {
         margin-top:0px;
     }
@@ -2210,7 +2207,8 @@ body {
     }
 
     .banner__request-a-quote--label {
-        width:6%;
+        width:22px;
+        top:20px;
     }
 
     .banner__request-a-quote--forma--name--input,
@@ -2231,6 +2229,45 @@ body {
     .how-it-works__bottom {
         width: 42.1025641025641%;
     }
+
+    .item-description-services__icon-clock,
+    .item-description-services__icon-code,
+    .item-description-services__icon-racket,
+    .item-description-services__icon-dollor,
+    .item-description-services__icon-setting,
+    .item-description-services__icon-cap {
+        width:100px;
+        margin:0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .item-description-services {
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .item-description-services__text{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .our-services__div-title {
+        margin-bottom: 0px;
+    }
+
+    .how-it-works__steps--descriptions {
+        width: 80.10512820512821%;
+        font-size: 1.6rem;
+    }
+
+
+    .banner__request-a-quote--forma--name--input_news-letter,
+    .banner__request-a-quote--forma--emailAdress--input_news-letter {
+        height:60px;
+    }
+
+
 }
 
 @media (max-width:450px) {
@@ -2251,6 +2288,27 @@ body {
 
     .reviews__post--text {
         margin-top:20px;
+    }
+
+    .banner__request-a-quote--label {
+        width:18px;
+        height:18px;
+    }
+
+    .banner__request-a-quote--forma--name--input,
+    .banner__request-a-quote--forma--emailAdress--input,
+    .banner__request-a-quote--forma--PhoneNamberr--input {
+        padding-left: 45px;
+    }
+
+    .banner__request-a-quote--forma--name,
+    .banner__request-a-quote--forma--emailAdress,
+    .banner__request-a-quote--forma--PhoneNamberr {
+        width: 95%;
+    }
+
+    .banner__request-a-quote--forma--submit {
+        width: 161px;
     }
 }
 /*закончил делать адаптив*/
