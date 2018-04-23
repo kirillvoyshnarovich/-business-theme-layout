@@ -1,7 +1,0 @@
-fontAwesome
-Gotham Black
-OpenSans light
-OpenSans
-Lato Bold
-
-281 на 46
